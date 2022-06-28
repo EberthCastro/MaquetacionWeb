@@ -1,0 +1,192 @@
+
+body{
+    margin: 0;
+    
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr  0.6fr;
+    grid-template-areas: 
+           "main    main   header"
+           "main    main   perfume"
+           "nom     nom2    perfume"
+           "footer1  footer2 perfume"
+           "footer4  footer4  perfume";
+    height: 100vh;
+    /* margin: 0em;    ---margen entre el grip y el background*/
+    
+}
+ main{
+     /*grid-row-start: 1;
+     grid-row-end: 3;
+         
+     grid-column: 1/3;
+     grid-row: 1/3 ;*/
+
+     grid-area: main;
+     background: linear-gradient(to right, #5ab2da, white );
+
+ }
+
+ section.nom{
+     grid-area: nom;  /* ...row/column/...*/
+     background: linear-gradient(to right, black, #abdefa );
+     
+ }
+ section.nom2{
+    grid-area: nom2;  /* ...row/column/...*/
+    background: linear-gradient(to right, #abdefa, white );
+}
+section.energydrink{
+    grid-area: footer1;  /* ...row/column/row/column...*/
+    background: linear-gradient(to right, black, #abdefa );    
+    
+}
+section.resumen{
+    grid-area: footer2;  /* ...row/column/row/column...*/
+    background: linear-gradient(to right, #abdefa, white );    
+    
+}
+
+section.social-links{
+    grid-area: footer4;  /* ...row/column/row/column...*/
+    background: linear-gradient(to right, white, white ); 
+
+}
+
+header{
+    grid-area: header;  /* ...row/column/...*/
+    background: white;
+    
+}
+.perfume{
+    grid-area: perfume;  /* ...row/column/...*/
+    background: url('../perfume2.jpg') no-repeat;
+    background-size: cover;
+    
+       
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-icon{
+    height: 50px;
+    width: 60px;
+    padding-top: 1px;
+    /*display: none; */
+    
+}
+
+nav ul li{
+    list-style: none; /* elimina las viñetas Home,About,Shop Perfumes*/
+    display: inline-block;
+    /*margin-left: 10px;*/
+    
+    
+}
+nav ul li a{
+    text-decoration: none;  /* elimina el subrayado del texto*/
+    color: black;
+    font-size: 16px;
+   margin: 5px 24px;  /* margen entre la lista*/
+   
+  
+    
+}
+nav ul li a:hover{
+    color: #c4b35a  /* resalta los palabras del menú al poner el cursor*/
+}
+.essens{   /* logo */
+    width: 17%;
+    height: 2%;
+    margin: 20px 0;
+    padding-left: 2%;
+}
+
+div h1{  /* palabra abajo del logo: ESSENS */
+    font-size: 13px;
+    justify-content: center;
+    padding-left: 9.5%;
+    margin: -20px ;
+    margin-bottom: 30px;
+    color: rgb(2, 18, 74);
+}
+
+.phombre{
+    width: 110%;
+    height: 45%;
+    justify-content: center;
+    background-color: aliceblue;    
+}
+
+.pmujer{
+    width: 100%;
+    height: 45%;
+    
+}
+
+div section h3{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    
+    
+}
+
+.footer4 img{  /* social links*/
+    height: 16px;
+    margin: 20px;
+    cursor: pointer;
+}
+.footer4{
+    text-align: center;
+    
+}
+
+section h4{
+    margin: 0px 5px;    
+    text-align: left;
+    padding: 1px 1px;
+    padding-right: 200px;
+    color: white;
+    font-style: italic;
+    font-size: 19px;
+    
+}
+button {
+    width: 100px;    
+    border: 0;
+    padding: 1px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, black, #ff3527);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+button img{
+    width: 30px;
+    height: 10px;
+    display: none;
+}
+
+button:hover img{
+    display: block;
+}
+button:hover{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
